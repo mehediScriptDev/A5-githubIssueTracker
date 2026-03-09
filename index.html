@@ -29,9 +29,32 @@
         }
      </style>
   </head>
-  <body>
-    <section>
-      <h1 class="font-geist">Hello world</h1>
+  <body class="container mx-auto px-4">
+    <section class="flex items-center justify-center min-h-screen">
+      <div class="card bg-base-100 w-full max-w-lg mx-auto shrink-0 shadow-sm border border-gray-200/40">
+      <div class="card-body">
+        <div>
+            <img class="mx-auto" src="/assets/github-logo.png" alt="">
+            <h1 class="text-center text-2xl font-bold mt-4">GitHub Issues Tracker</h1>
+            <p class="text-[#64748B] text-base text-center">Sign in to manage your issues</p>
+        </div>
+        <fieldset class="fieldset">
+          <label class="label text-base text-[#1F2937] font-medium">Username</label>
+          <input type="email" class="input w-full text-base p-5 border-[#64748B30] rounded-lg" placeholder="Enter Username" />
+          <label class="label text-base text-[#1F2937] font-medium">Password</label>
+          <input type="password" class="input w-full p-5 text-base border-[#64748B30] rounded-lg" placeholder="Enter Password" />
+          <button class="btn btn-primary mt-4 w-full text-sm lg:text-base py-3 lg:py-5">Sign In</button>
+        </fieldset>
+        <div class="divider">OR</div>
+        <div class="flex flex-col items-center justify-center">
+            <p class="text-[#64748B] text-sm mb-2">Demo Credentials:</p>
+            <div class="bg-[#F8FAFC] w-full rounded-lg py-6">
+                <p class="text-center"><span class="font-medium text-base">Username:</span> admin</p>
+            <p class="text-center"><span class="font-medium text-base">Password:</span> admin123</p>
+            </div>
+        </div>
+      </div>
+    </div>
     </section>
   </body>
 </html>
