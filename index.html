@@ -175,9 +175,10 @@
               </div>
             </div>
           </div>
-          <div class="p-6 bg-[#FBFBFB] shadow rounded-b-lg">
+          <div id="cardContainer" class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 lg:gap-3 bg-[#FBFBFB] shadow rounded-b-lg">
             <!-- cards -->
             <div
+            onclick="my_modal_5.showModal()"
               class="bg-white shadow rounded-lg border-t-2 border-[#A855F7] p-4"
             >
               <div class="flex justify-between items-center mb-3">
@@ -233,7 +234,6 @@
     </section>
 
     <!-- modal -->
-    <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
       <div class="modal-box">
         <h3 class="text-lg font-bold mb-3">Fix broken image uploads</h3>
@@ -264,15 +264,19 @@
           to fix the responsive behavior.
         </p>
         <div class="bg-[#F8FAFC] rounded-lg p-4 flex justify-between">
-<div>
-    <h1 class="text-[#64748B] text-base">Assignee:</h1>
-    <p class="font-semibold text-base">Famin mia</p>
-</div>
-<div class="flex flex-col justify-start items-start">
-    <h1 class="text-[#64748B] text-base">Priority:</h1>
-    <p class="font-semibold uppercase bg-[#EF4444] text-white py-1 px-2 rounded-full text-xs">High</p>
-</div>
-<div></div>
+          <div>
+            <h1 class="text-[#64748B] text-base">Assignee:</h1>
+            <p class="font-semibold text-base">Famin mia</p>
+          </div>
+          <div class="flex flex-col justify-start items-start">
+            <h1 class="text-[#64748B] text-base">Priority:</h1>
+            <p
+              class="font-semibold uppercase bg-[#EF4444] text-white py-1 px-2 rounded-full text-xs"
+            >
+              High
+            </p>
+          </div>
+          <div></div>
         </div>
 
         <div class="modal-action">
@@ -283,5 +287,7 @@
         </div>
       </div>
     </dialog>
+
+    <script src="/script/script.js"></script>
   </body>
 </html>
