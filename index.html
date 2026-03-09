@@ -128,7 +128,7 @@
       </nav>
 
       <!-- main content -->
-      <div class="w-11/12 md:max-w-7xl mx-auto mt-12">
+      <div class="w-11/12 md:max-w-7xl mx-auto mt-6 md:mt-12">
         <!-- tabs -->
         <div class="bg-white rounded-lg flex gap-2 p-6 shadow">
           <button class="btn btn-primary px-8">All</button>
@@ -145,9 +145,9 @@
         </div>
 
         <!-- card tables -->
-        <div class="mt-4">
+        <div class="my-4">
           <div
-            class="bg-white rounded-t-lg shadow flex justify-between items-center p-6 border-b border-[#E4E4E7]"
+            class="bg-white rounded-t-lg shadow flex flex-col md:flex-row gap-y-3 md:justify-between items-center p-6 border-b border-[#E4E4E7]"
           >
             <div class="flex gap-2 items-center">
               <div class="bg-[#ECE4FF] p-2 rounded-full">
@@ -210,21 +210,20 @@
                     <p
                       class="uppercase text-xs text-[#EF4444] font-semibold bg-[#FEECEC] py-1.5 rounded-full px-4 border border-[#FECACA]"
                     >
-                      bug
+                      <i class="fa-solid fa-bug"></i> bug
                     </p>
-                  
+
                     <p
                       class="uppercase text-xs font-semibold bg-[#FFF8DB] text-[#D97706] py-1.5 rounded-full px-4 border border-[#FDE68A]"
                     >
-                      help wanted
+                      <i class="fa-regular fa-life-ring"></i> help wanted
                     </p>
                   </div>
                 </div>
                 <div class="divider -mx-4"></div>
                 <div class="space-y-2">
-                    <p class="text-xs text-[#64748B]">#1
-by john_doe</p>
-<p class="text-xs text-[#64748B]">1/15/2024</p>
+                  <p class="text-xs text-[#64748B]">#1 by john_doe</p>
+                  <p class="text-xs text-[#64748B]">1/15/2024</p>
                 </div>
               </div>
             </div>
@@ -232,5 +231,57 @@ by john_doe</p>
         </div>
       </div>
     </section>
+
+    <!-- modal -->
+    <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold mb-3">Fix broken image uploads</h3>
+        <div class="text-[#64748B] flex justify-start gap-2 items-center mb-4">
+          <p class="text-xs bg-[#00A96E] text-white py-1 px-2 rounded-full">
+            Openned
+          </p>
+          <span class="inline-block w-1 h-1 bg-[#64748B] rounded-full"></span>
+          <p class="text-xs text-[#64748B]">Opened by Fahim Ahmed</p>
+          <span class="inline-block w-1 h-1 bg-[#64748B] rounded-full"></span>
+          <p class="text-xs text-[#64748B]">22/02/2026</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <p
+            class="uppercase text-xs text-[#EF4444] font-semibold bg-[#FEECEC] py-1 rounded-full px-2 border border-[#FECACA]"
+          >
+            <i class="fa-solid fa-bug"></i> bug
+          </p>
+
+          <p
+            class="uppercase text-xs font-semibold bg-[#FFF8DB] text-[#D97706] py-1 rounded-full px-2 border border-[#FDE68A]"
+          >
+            <i class="fa-regular fa-life-ring"></i> help wanted
+          </p>
+        </div>
+        <p class="text-base text-[#64748B] my-4">
+          The navigation menu doesn't collapse properly on mobile devices. Need
+          to fix the responsive behavior.
+        </p>
+        <div class="bg-[#F8FAFC] rounded-lg p-4 flex justify-between">
+<div>
+    <h1 class="text-[#64748B] text-base">Assignee:</h1>
+    <p class="font-semibold text-base">Famin mia</p>
+</div>
+<div class="flex flex-col justify-start items-start">
+    <h1 class="text-[#64748B] text-base">Priority:</h1>
+    <p class="font-semibold uppercase bg-[#EF4444] text-white py-1 px-2 rounded-full text-xs">High</p>
+</div>
+<div></div>
+        </div>
+
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn btn-primary">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>
