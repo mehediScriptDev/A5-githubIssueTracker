@@ -43,7 +43,8 @@
   <body class="">
     <!-- login page -->
     <section
-      class="items-center justify-center min-h-screen hidden container mx-auto px-4"
+    id="loginPage"
+      class="items-center flex justify-center min-h-screen container mx-auto px-4"
     >
       <div
         class="card bg-base-100 w-full max-w-lg mx-auto shrink-0 shadow-sm border border-gray-200/40"
@@ -64,6 +65,7 @@
             >
             <input
               type="email"
+              id="username"
               class="input w-full text-base p-5 border-[#64748B30] rounded-lg"
               placeholder="Enter Username"
             />
@@ -72,10 +74,12 @@
             >
             <input
               type="password"
+              id="password"
               class="input w-full p-5 text-base border-[#64748B30] rounded-lg"
               placeholder="Enter Password"
             />
             <button
+            id="submitBtn"
               class="btn btn-primary mt-4 w-full text-sm lg:text-base py-3 lg:py-5"
             >
               Sign In
@@ -98,7 +102,7 @@
     </section>
 
     <!-- website -->
-    <section class="bg-[#F8FAFC]">
+    <section id="website" class="bg-[#F8FAFC] hidden">
       <!-- navbar -->
       <nav class="bg-base-100 shadow">
         <div
@@ -114,6 +118,7 @@
             <div class="flex-1 min-w-0">
               <input
                 type="text"
+                id="searchInput"
                 placeholder="Search"
                 class="input input-bordered w-full"
               />
@@ -231,5 +236,6 @@
     </dialog>
 
     <script src="/script/script.js"></script>
+    <script src="script/login.js"></script>
   </body>
 </html>

@@ -162,4 +162,33 @@ const displayData = (datas) => {
   }
 };
 
+// search functionalities
+
+const searchIssues = (searchText) => {
+  fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchText}`)
+    .then((res) => res.json())
+    .then((data) => {
+      const results = data.data || [];
+      displayData(results);
+      updateTotal(results.length);
+      setActiveTab(null);
+    })
+    .catch((err) => console.error(err));
+};
+const searchInput = document.getElementById("searchInput");
+
+if (searchInput) {
+  searchInput.addEventListener("keyup", (e) => {
+    const text = e.target.value.trim();
+
+    if (text === "") {
+      displayData(allIssues);
+      updateTotal(allIssues.length);
+      setActiveTab("tabAll");
+    } else {
+      searchIssues(text);
+    }
+  });
+}
+
 loadAllCardsData();
