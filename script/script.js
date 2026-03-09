@@ -28,41 +28,38 @@ const displayData = (datas) => {
     }
 
     // card labels
-let labelContainer = '';
-    data.labels.forEach(label=>{
-        let labelColor = "text-[#EF4444] bg-[#FEECEC]";
-        if(label === "bug") {
-            labelColor ='text-[#EF4444] bg-[#FEECEC] border border-[#FECACA]'
-        }
-        else if(label === "help wanted") {
-            labelColor ='bg-[#FFF8DB] text-[#D97706] border border-[#FECACA]'
-        }
-        else if(label === "enhancement") {
-            labelColor ='bg-[#DEFCE8] text-[#00A96E] border border-[#00A96E]'
-        }
-        else{
-            labelColor ='bg-[#FFF8DB] text-[#D97706] border border-[#FECACA]'
-        }
+    let labelContainer = "";
+    data.labels.forEach((label) => {
+      let labelColor = "text-[#EF4444] bg-[#FEECEC]";
+      if (label === "bug") {
+        labelColor = "text-[#EF4444] bg-[#FEECEC] border border-[#FECACA]";
+      } else if (label === "help wanted") {
+        labelColor = "bg-[#FFF8DB] text-[#D97706] border border-[#FECACA]";
+      } else if (label === "enhancement") {
+        labelColor = "bg-[#DEFCE8] text-[#00A96E] border border-[#00A96E]";
+      } else {
+        labelColor = "bg-[#FFF8DB] text-[#D97706] border border-[#FECACA]";
+      }
 
-        let icon = `<i class="fa-solid fa-wand-magic-sparkles"></i>`;
-        if(label === "bug") {
-            icon = `<i class="fa-solid fa-bug"></i>`;
-        } else if(label === "help wanted") {
-            icon = `<i class="fa-regular fa-life-ring"></i>`;
-        } else if(label === "enhancement") {
-            icon = `<i class="fa-solid fa-wand-magic-sparkles"></i>`;
-        }
+      let icon = `<i class="fa-solid fa-wand-magic-sparkles"></i>`;
+      if (label === "bug") {
+        icon = `<i class="fa-solid fa-bug"></i>`;
+      } else if (label === "help wanted") {
+        icon = `<i class="fa-regular fa-life-ring"></i>`;
+      } else if (label === "enhancement") {
+        icon = `<i class="fa-solid fa-wand-magic-sparkles"></i>`;
+      }
 
-        labelContainer += `
+      labelContainer += `
         <p
                       class="uppercase text-[8px] ${labelColor} font-semibold  py-1.5 rounded-full px-4 "
                     >
                       ${icon} ${label}
                     </p>
-        `
-    })
+        `;
+    });
     card.innerHTML = `<div
-            onclick="my_modal_5.showModal()"
+            onclick="${data.id}.showModal()"
               class="bg-white shadow rounded-lg border-t-2 ${borderCl} p-4"
             >
               <div class="flex justify-between items-center mb-3">
