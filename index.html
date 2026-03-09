@@ -43,7 +43,7 @@
   <body class="">
     <!-- login page -->
     <section
-    id="loginPage"
+      id="loginPage"
       class="items-center flex justify-center min-h-screen container mx-auto px-4"
     >
       <div
@@ -79,7 +79,7 @@
               placeholder="Enter Password"
             />
             <button
-            id="submitBtn"
+              id="submitBtn"
               class="btn btn-primary mt-4 w-full text-sm lg:text-base py-3 lg:py-5"
             >
               Sign In
@@ -137,12 +137,28 @@
         <!-- tabs -->
         <div class="bg-white rounded-lg flex gap-2 p-6 shadow">
           <button id="tabAll" class="btn btn-primary px-8">All</button>
-          <button id="tabOpen" class="btn text-[#64748B] border bg-white border-[#E4E4E7] px-6">Open</button>
-          <button id="tabClosed" class="btn text-[#64748B] border bg-white border-[#E4E4E7] px-6">Closed</button>
+          <button
+            id="tabOpen"
+            class="btn text-[#64748B] border bg-white border-[#E4E4E7] px-6"
+          >
+            Open
+          </button>
+          <button
+            id="tabClosed"
+            class="btn text-[#64748B] border bg-white border-[#E4E4E7] px-6"
+          >
+            Closed
+          </button>
         </div>
-
+        <!-- loading -->
+        <div
+          id="loadingSpinner"
+          class="max-w-7xl mx-auto py-10 flex justify-center items-center hidden"
+        >
+          <span class="loading loading-bars loading-xl"></span>
+        </div>
         <!-- card tables -->
-        <div class="my-4">
+        <div id="cardTables" class="my-4">
           <div
             class="bg-white rounded-t-lg shadow flex flex-col md:flex-row gap-y-3 md:justify-between items-center p-6 border-b border-[#E4E4E7]"
           >
@@ -172,9 +188,11 @@
               </div>
             </div>
           </div>
-          <div id="cardContainer" class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 lg:gap-3 bg-[#FBFBFB] shadow rounded-b-lg">
+          <div
+            id="cardContainer"
+            class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 lg:gap-3 bg-[#FBFBFB] shadow rounded-b-lg"
+          >
             <!-- cards -->
-            
           </div>
         </div>
       </div>

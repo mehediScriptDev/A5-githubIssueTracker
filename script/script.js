@@ -1,6 +1,11 @@
 let allIssues = [];
 
 const loadAllCardsData = () => {
+  // show loading spinner 
+  try {
+    spinner(true);
+  } catch (e) {}
+
   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
     .then((res) => res.json())
     .then((data) => {
@@ -10,7 +15,11 @@ const loadAllCardsData = () => {
       updateTotal(allIssues.length);
       attachFilterHandlers();
     })
-    .catch((err) => console.error(err));
+    .catch((err) => console.error(err))
+    .finally(() => {
+      // hide spinner 
+      try { spinner(false); } catch (e) {}
+    });
 };
 
 const updateTotal = (count) => {
@@ -189,6 +198,17 @@ if (searchInput) {
       searchIssues(text);
     }
   });
+}
+
+
+const spinner =(status)=>{
+if(status === true){
+    document.getElementById('loadingSpinner').classList.remove('hidden');
+    document.getElementById('cardTables').classList.add('hidden');
+} else {
+    document.getElementById('loadingSpinner').classList.add('hidden');
+    document.getElementById('cardTables').classList.remove('hidden');
+}
 }
 
 loadAllCardsData();
